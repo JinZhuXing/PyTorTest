@@ -1,7 +1,7 @@
 import argparse
 import sys
 import requests
-import change_tor_ip
+from change_tor_ip import change_tor_ip
 
 # main process
 def main(args):
@@ -55,6 +55,8 @@ def parse_arguments(argv):
                     help = 'tor control password', default = 'my-tor-password')
     parser.add_argument('--test_url', type = str,
                     help = 'tor test url', default = 'https://www.stackoverflow.com')
+    
+    return (parser.parse_args(argv))
 
 
 # start point
